@@ -1,69 +1,236 @@
+/*
+--- VARIABLES AND GLOBAL STYLES ---
+*/
+
+:root {
+    --primary-color: #004AAD;
+    --secondary-color: #0088cc;
+    --text-color: #222;
+    --background-light: #f9f9f9;
+    --background-darker: #f1f1f1;
+    --white: #fff;
+    --whatsapp-green: #25D366;
+    
+    --font-main: 'Inter', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-  font-family: 'Inter', sans-serif;
-  margin: 0;
-  background: #f9f9f9;
-  color: #222;
+    font-family: var(--font-main);
+    background-color: var(--background-light);
+    color: var(--text-color);
+    line-height: 1.6;
 }
-header {
-  background: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px 40px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
-header img {
-  height: 60px;
+
+h1, h2 {
+    line-height: 1.2;
 }
-nav a {
-  margin-left: 20px;
-  text-decoration: none;
-  color: #333;
-  font-weight: 600;
+
+h1 {
+    font-size: 2.5rem; /* 40px */
+    margin-bottom: 0.5em;
 }
+
+h2 {
+    font-size: 2rem; /* 32px */
+    color: var(--primary-color);
+    margin-bottom: 1em;
+}
+
+p, li {
+    font-size: 1.125rem; /* 18px */
+}
+
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--primary-color);
+}
+
+/*
+--- HEADER ---
+*/
+
+.header {
+    background-color: var(--white);
+    padding: 20px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 50px;
+    display: block;
+}
+
+.main-nav a {
+    color: #333;
+    font-weight: 600;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: var(--primary-color);
+}
+
+/*
+--- HERO SECTION ---
+*/
+
 .hero {
-  background: linear-gradient(to right, #004AAD, #0088cc);
-  color: white;
-  text-align: center;
-  padding: 80px 20px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    text-align: center;
+    padding: 100px 0;
 }
-.hero h1 {
-  font-size: 36px;
-  margin-bottom: 10px;
+
+.hero p {
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin: 0 auto;
 }
-.section {
-  padding: 60px 20px;
-  max-width: 900px;
-  margin: auto;
+
+/*
+--- CONTENT SECTIONS ---
+*/
+
+.content-section {
+    padding: 80px 0;
 }
-.section h2 {
-  font-size: 28px;
-  margin-bottom: 20px;
-  color: #004AAD;
+
+.content-section.bg-light {
+    background-color: var(--white);
 }
-.section p,
-.section li {
-  font-size: 18px;
-  line-height: 1.6;
+
+.content-section ul {
+    list-style-position: inside;
+    padding-left: 0;
 }
-ul {
-  padding-left: 20px;
+
+/*
+--- CONTACT SECTION ---
+*/
+.contact-info p {
+    margin-bottom: 1rem;
 }
-footer {
-  text-align: center;
-  padding: 40px 20px;
-  background: #f1f1f1;
-  color: #555;
+
+.contact-link {
+    display: inline-flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1.125rem;
 }
+
+.contact-icon {
+    width: 22px;
+    height: 22px;
+    margin-right: 12px;
+    color: var(--primary-color);
+}
+
+.location-text {
+    margin-top: 2rem;
+    font-style: italic;
+}
+
+/*
+--- FOOTER ---
+*/
+
+.footer {
+    text-align: center;
+    padding: 40px 0;
+    background-color: var(--background-darker);
+    color: #555;
+    border-top: 1px solid #ddd;
+}
+
+/*
+--- WHATSAPP BUTTON ---
+*/
+
 .whatsapp-button {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25D366;
-  color: white;
-  padding: 15px 20px;
-  border-radius: 50px;
-  font-weight: bold;
-  text-decoration: none;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: var(--whatsapp-green);
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo para a imagem da logo dentro do botão */
+.whatsapp-button img {
+    width: 55px; /* Tamanho da logo */
+    height: 55px; /* Tamanho da logo */
+    border-radius: 50%; /* Garante que a imagem seja redonda */
+    object-fit: cover; /* Ajusta a imagem caso não seja quadrada */
+}
+
+
+/*
+--- RESPONSIVE DESIGN ---
+*/
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    .header .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .main-nav a {
+        margin: 0 10px;
+    }
+    
+    .hero {
+        padding: 60px 0;
+    }
+    
+    .content-section {
+        padding: 60px 0;
+    }
 }
