@@ -202,16 +202,6 @@ p { font-size: 1.1rem; color: var(--text-secondary); }
 .footer { text-align: center; padding: 30px 0; border-top: 1px solid #333; margin-top: -1px; background: var(--bg-light); }
 .footer p { font-size: 0.9rem; color: var(--text-secondary); }
 
-/* --- WHATSAPP BUTTON --- */
-.whatsapp-button {
-    position: fixed; bottom: 25px; right: 25px;
-    background-color: var(--whatsapp-green);
-    width: 60px; height: 60px; border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-}
-.whatsapp-button:hover { transform: scale(1.1); }
 
 /* --- RESPONSIVIDADE --- */
 @media (max-width: 768px) {
