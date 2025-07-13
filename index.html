@@ -11,31 +11,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="style.css">
-
-    <style>
-      /* Estilos para a nova logo em SVG */
-      .logo-svg {
-        height: 40px; /* Altura da logo */
-        width: auto;  /* Largura automática para manter a proporção */
-      }
-      .logo-svg .main-text {
-        fill: #333333; /* Cor para "Digitaliza" */
-      }
-      .logo-svg .pro-text {
-        fill: #007BFF; /* Cor de destaque para "Pro" */
-      }
-    </style>
 </head>
 <body>
 
     <header class="header">
         <div class="container">
             <a href="/" aria-label="Página Inicial da Digitaliza Pro">
-                <svg class="logo-svg" viewBox="0 0 205 50" xmlns="http://www.w3.org/2000/svg">
-                  <title>Logo Digitaliza Pro</title>
-                  <text x="0" y="35" font-family="Poppins, sans-serif" font-size="30" font-weight="600" class="main-text">Digitaliza</text>
-                  <text x="140" y="35" font-family="Poppins, sans-serif" font-size="30" font-weight="700" class="pro-text">Pro</text>
-                </svg>
+                <img src="logo.png" alt="Logo Digitaliza Pro" class="logo" />
             </a>
             <nav class="main-nav">
                 <a href="#sobre">Sobre</a>
@@ -47,7 +29,14 @@
 
     <main>
         <section class="hero">
-            <div class="container">
+            <div class="video-background">
+                <video autoplay loop muted playsinline>
+                    <source src="digitaliza-pro-video.mp4" type="video/mp4">
+                    Seu navegador não suporta a tag de vídeo.
+                </video>
+            </div>
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
                 <h1>Excelência em Automação e Marketing Digital</h1>
                 <p>Criamos estratégias de alta performance que transformam processos e impulsionam o crescimento do seu negócio.</p>
                 <a href="#servicos" class="btn btn-primary">Conheça nossas soluções</a>
@@ -112,6 +101,22 @@
                  </div>
             </div>
         </section>
+
+        <section id="desenvolvedora" class="content-section">
+            <div class="container dev-container">
+                <h2>Idealização e Desenvolvimento</h2>
+                <p class="dev-name">Michelen Voigt</p>
+                <p>Este site foi projetado e desenvolvido com foco em performance, design responsivo e nas mais recentes tecnologias web.</p>
+                <div class="dev-links">
+                    <a href="https://chelyvoigt.github.io/my-web-site/" target="_blank" class="contact-link">
+                        Ver Portfólio
+                    </a>
+                    <a href="https://www.linkedin.com/in/michelenvoigt-dev/" target="_blank" class="contact-link">
+                        LinkedIn
+                    </a>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="footer">
@@ -126,4 +131,3 @@
 
 </body>
 </html>
-
