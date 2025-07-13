@@ -72,43 +72,21 @@ p { font-size: 1.1rem; color: var(--text-secondary); }
 .main-nav a { color: var(--text-light); font-weight: 500; margin-left: 35px; }
 .main-nav a:hover { color: var(--accent-color); }
 
-/* --- HERO SECTION COM VÍDEO --- */
+/* --- HERO SECTION COM LOGO --- */
 .hero {
-    position: relative;
-    height: 100vh; /* Ocupa a altura total da tela */
-    display: flex;
-    align-items: center;
-    justify-content: center;
     text-align: center;
-    overflow: hidden;
+    padding: 120px 0;
+    background: linear-gradient(rgba(26, 29, 36, 0.9), rgba(26, 29, 36, 1));
 }
-.video-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
+.hero-logo {
+    height: 100px; /* Ajuste a altura da logo conforme necessário */
+    margin-bottom: 2.5rem;
 }
-.video-background video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Garante que o vídeo cubra toda a área */
+.hero-content p {
+    max-width: 650px;
+    margin: 1rem auto 2.5rem;
+    font-size: 1.2rem;
 }
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(26, 29, 36, 0.6); /* Camada escura sobre o vídeo */
-    z-index: 2;
-}
-.hero-content {
-    position: relative;
-    z-index: 3;
-}
-.hero-content p { max-width: 650px; margin: 1rem auto 2.5rem; font-size: 1.2rem; }
 
 /* --- SEÇÕES DE CONTEÚDO --- */
 .content-section { padding: 100px 0; }
@@ -202,12 +180,23 @@ p { font-size: 1.1rem; color: var(--text-secondary); }
 .footer { text-align: center; padding: 30px 0; border-top: 1px solid #333; margin-top: -1px; background: var(--bg-light); }
 .footer p { font-size: 0.9rem; color: var(--text-secondary); }
 
+/* --- WHATSAPP BUTTON --- */
+.whatsapp-button {
+    position: fixed; bottom: 25px; right: 25px;
+    background-color: var(--whatsapp-green);
+    width: 60px; height: 60px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+.whatsapp-button:hover { transform: scale(1.1); }
 
 /* --- RESPONSIVIDADE --- */
 @media (max-width: 768px) {
     h1 { font-size: 2.5rem; }
     h2 { font-size: 2rem; }
-    .hero { height: 80vh; /* Altura menor para telas pequenas */ }
+    .hero { padding: 100px 20px; }
+    .hero-logo { height: 80px; }
     .content-section { padding: 80px 0; }
     .header .container { flex-direction: column; gap: 20px; }
     .main-nav a { margin: 0 15px; }
